@@ -24,16 +24,18 @@ ry = true
 [node name="Wheel" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
 
-[node name="Fence2" parent="Wheel" instance=ExtResource( 2 )]
+[node name="Obstacles" type="Spatial" parent="Wheel"]
+
+[node name="Fence2" parent="Wheel/Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 0.874823, 0.484443, 0, -0.484443, 0.874823, 0, 0, 0 )
 
-[node name="Fence" parent="Wheel" instance=ExtResource( 2 )]
+[node name="Fence" parent="Wheel/Obstacles" instance=ExtResource( 2 )]
 
-[node name="Fence3" parent="Wheel" instance=ExtResource( 2 )]
+[node name="Fence3" parent="Wheel/Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, -0.534352, 0.845262, 0, -0.845262, -0.534352, 0, 0, 0 )
 
-[node name="Fence4" parent="Wheel" instance=ExtResource( 2 )]
+[node name="Fence4" parent="Wheel/Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, -0.31747, -0.948268, 0, 0.948268, -0.31747, 0, 0, 0 )
 
-[node name="Fence5" parent="Wheel" instance=ExtResource( 2 )]
+[node name="Fence5" parent="Wheel/Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 0.655321, -0.75535, 0, 0.75535, 0.655321, 0, 0, 0 )

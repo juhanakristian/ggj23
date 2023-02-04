@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "CanvasLayer",
+"class": "DebugUI",
+"language": "GDScript",
+"path": "res://Scenes/UI/DebugUI.gd"
+} ]
+_global_script_class_icons={
+"DebugUI": ""
+}
+
 [application]
 
 config/name="ggj23"
