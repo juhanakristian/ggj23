@@ -21,8 +21,8 @@ func _move_to_lane(lane):
 func _jump():
 	var tween = get_tree().create_tween()
 	var translation = $Player.translation
-	tween.tween_property($Player, "translation", translation + Vector3(0, 2, 0), 0.5).set_trans(Tween.TRANS_QUAD)
-	tween.tween_property($Player, "translation", translation, 0.2).set_trans(Tween.TRANS_QUINT)
+	tween.tween_property($Player, "translation", translation + Vector3(0, 3, 0), 0.3).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property($Player, "translation", translation, 0.3).set_trans(Tween.TRANS_QUART)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,6 +37,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("move_left"):
 		lane = max(lane-1,0)
 		_move_to_lane(lane)
-	if Input.is_action_just_pressed("jump"):
+
+	var isMoving = $Player.translation.x != $Lane1.translation.x && $Player.translation.x != $Lane2.translation.x && $Player.translation.x != $Lane0.translation.x
+	var isJumping = $Player.translation.y != 0
+	if !isJumping && !isMoving && Input.is_action_just_pressed("jump"):
 		_jump()
 
