@@ -16,4 +16,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.36274, 0, 0 )
 spin_speed = 42.0
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.953916, 0.300073, 0, -0.300073, 0.953916, 3.722, 28.0327, 11.4357 )
+transform = Transform( 1, 0, 0, 0, 0.953916, 0.300073, 0, -0.300073, 0.953916, 3.722, 31.4978, 8.09697 )
