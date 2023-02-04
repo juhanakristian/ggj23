@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Game/WheelRotators/WheelRotator.tscn" type="PackedScene" id=1]
+
+[node name="TestWheelRotator" type="Spatial"]
+
+[node name="WheelRotator3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.37112, 0, 0 )
+spin_speed = 42.0
+ry = true
+
+[node name="WheelRotator2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11787, 0, 0 )
+spin_speed = 23.0
+ry = true
+
+[node name="WheelRotator" parent="." instance=ExtResource( 1 )]
+spin_speed = 16.0
+ry = true
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( -0.271507, 0, 0.962436, 0, 1, 0, -0.962436, 0, -0.271507, 49.9557, 28.8828, 3.20555 )
+current = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.938902, 0, 0.344184, 0, 1, 0, -0.344184, 0, 0.938902, -0.626755, 29.9066, 16.2464 )
