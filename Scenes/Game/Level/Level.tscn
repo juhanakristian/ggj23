@@ -11,8 +11,6 @@ script = ExtResource( 5 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01478, 24.9435, 0.316188 )
-jump_height = 4
-jump_duration = 0.7
 
 [node name="WheelRotator" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.999999, -9.9847e-05, -0.00151689, 0.00104144, 0.771895, 0.635749, 0.00110739, -0.635749, 0.771895, 4.18137, 0, 0 )

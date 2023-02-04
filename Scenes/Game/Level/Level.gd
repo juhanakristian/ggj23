@@ -6,6 +6,8 @@ extends Spatial
 # var b = "text"
 var score = 0;
 
+export var invincible = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +16,8 @@ func _ready():
 
 func _on_player_damaged(obj_ref):
 	print("Player dead")
-	KantoSceneLoader.load_scene(self, "res://Scenes/Menu/MainMenu.tscn")
+	if not invincible:
+		KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/Level.tscn")
 
 	
 func _on_player_collected_item(obj_ref, item_type):

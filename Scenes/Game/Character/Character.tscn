@@ -17,6 +17,9 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 1.5, 0 )
 shape = SubResource( 1 )
 
+[node name="OmniLight" type="OmniLight" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.644833, 2.24892, -1.09398 )
+
 [node name="Lane0" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
 
