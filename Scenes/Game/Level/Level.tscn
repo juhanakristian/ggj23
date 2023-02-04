@@ -1,35 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Game/WheelRotators/WheelRotator.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Game/Character/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/UI/DebugUI.tscn" type="PackedScene" id=3]
-
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.552373, 1, 1 )
+[ext_resource path="res://Scenes/Game/WheelRotators/WheelRotatorCoins.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Game/Level/Level.gd" type="Script" id=5]
 
 [node name="Level" type="Spatial"]
+script = ExtResource( 5 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01478, 24.9435, 0.316188 )
-
-[node name="KinematicBody" type="KinematicBody" parent="Character"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Character/KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14495, 0 )
-shape = SubResource( 1 )
+jump_height = 4
+jump_duration = 0.7
 
 [node name="WheelRotator" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.999999, -9.9847e-05, -0.00151689, 9.79965e-05, 0.999999, -0.00122898, 0.00151701, 0.00122883, 0.999998, 4.18137, 0, 0 )
-spin_speed = 51.0
-
-[node name="WheelRotator2" parent="." instance=ExtResource( 1 )]
-spin_speed = 12.0
+transform = Transform( 0.999999, -9.9847e-05, -0.00151689, 0.00104144, 0.771895, 0.635749, 0.00110739, -0.635749, 0.771895, 4.18137, 0, 0 )
+spin_speed = 20.0
 
 [node name="WheelRotator3" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.36274, 0, 0 )
-spin_speed = 42.0
+spin_speed = 15.0
+
+[node name="WheelRotator4" parent="." instance=ExtResource( 4 )]
+spin_speed = 12.0
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.953916, 0.300073, 0, -0.300073, 0.953916, 3.722, 31.4978, 8.09697 )
+current = true
 
 [node name="DebugUI" parent="." instance=ExtResource( 3 )]
