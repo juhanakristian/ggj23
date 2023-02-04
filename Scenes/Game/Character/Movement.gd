@@ -7,6 +7,23 @@ extends Spatial
 
 export var lane = 1;
 
+func _move_to_lane(lane):
+	var move = Vector3(0, 0, 0)
+	if lane == 0:
+		move = $Lane0.translation
+	elif lane == 1:
+		move = $Lane1.translation
+	elif lane == 2:
+		move = $Lane2.translation
+	var tween = get_tree().create_tween()
+	tween.tween_property($Player, "translation", move, 0.5)
+
+func _jump():
+	var tween = get_tree().create_tween()
+	var translation = $Player.translation
+	tween.tween_property($Player, "translation", translation + Vector3(0, 2, 0), 0.5).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property($Player, "translation", translation, 0.2).set_trans(Tween.TRANS_QUINT)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -16,16 +33,10 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("move_right"):
 		lane = min(lane+1,2)
+		_move_to_lane(lane)
 	if Input.is_action_just_pressed("move_left"):
 		lane = max(lane-1,0)
+		_move_to_lane(lane)
+	if Input.is_action_just_pressed("jump"):
+		_jump()
 
-	var tween = get_tree().create_tween()
-	var move = Vector3(0, 0, 0)
-	if lane == 0:
-		move = $Lane0.translation
-	elif lane == 1:
-		move = $Lane1.translation
-	elif lane == 2:
-		move = $Lane2.translation
-
-	tween.tween_property($Player, "translation", move, 0.5)
