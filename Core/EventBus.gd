@@ -18,6 +18,19 @@ func emit_player_damaged(obj_ref):
 	emit_signal(SIGNAL_PLAYER_DAMAGED, obj_ref)
 
 
+## Signal which informs that the player has collected item
+const SIGNAL_PLAYER_COLLECTED_ITEM = "player_collected_item"
+signal player_collected_item(obj_ref, item_type)
+
+func connect_player_collected_item(obj, method="_on_player_collected_item"):
+	var err = connect(SIGNAL_PLAYER_COLLECTED_ITEM, obj, method)
+	handle_connect_result(err, SIGNAL_PLAYER_COLLECTED_ITEM, obj, method)
+
+func emit_player_collected_item(obj_ref, item_type):
+	emit_signal(SIGNAL_PLAYER_COLLECTED_ITEM, obj_ref, item_type)
+
+
+
 # Event when player request exits game
 const SIGNAL_PLAYER_EXIT_GAME = "player_exit_game"
 signal player_exit_game()
