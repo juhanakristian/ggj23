@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="ggj23"
 config/icon="res://icon.png"
 
+[autoload]
+
+KantoEventBus="*res://Core/EventBus.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

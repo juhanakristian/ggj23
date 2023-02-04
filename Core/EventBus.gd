@@ -15,7 +15,7 @@ func connect_player_damaged(obj, method="_on_player_damaged"):
 	handle_connect_result(err, SIGNAL_PLAYER_DAMAGED, obj, method)
 
 func emit_player_damaged(obj_ref):
-	emit_signal(SIGNAL_PLAYER_DAMAGED)
+	emit_signal(SIGNAL_PLAYER_DAMAGED, obj_ref)
 
 
 # Event when player request exits game
@@ -26,7 +26,7 @@ func connect_player_exit_game(obj, method="player_exit_game"):
 	var err = connect(SIGNAL_PLAYER_EXIT_GAME, obj, method)
 	handle_connect_result(err, SIGNAL_PLAYER_EXIT_GAME, obj, method)
 
-func emit_player_exit_game(obj_ref):
+func emit_player_exit_game():
 	emit_signal(SIGNAL_PLAYER_EXIT_GAME)
 
 
@@ -38,6 +38,6 @@ func connect_player_pause_game(obj, method="player_pause_game"):
 	var err = connect(SIGNAL_PLAYER_PAUSE_GAME, obj, method)
 	handle_connect_result(err, SIGNAL_PLAYER_PAUSE_GAME, obj, method)
 
-func emit_player_pause_game(obj_ref):
+func emit_player_pause_game():
 	emit_signal(SIGNAL_PLAYER_PAUSE_GAME)
 

@@ -10,5 +10,6 @@ func _ready():
 func _on_body_entered(body):
 	print("Body has entered")
 	emit_signal("obstacle_body_entered")
+	KantoEventBus.emit_player_damaged(self)
 	
 
