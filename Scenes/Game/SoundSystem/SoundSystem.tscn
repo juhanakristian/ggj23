@@ -3,8 +3,8 @@
 [ext_resource path="res://Assets/Sounds/Music/kazoo_apocalypse.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scenes/Game/SoundSystem/SoundSystem.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sounds/SFX/heavy_step1.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Assets/Sounds/SFX/sfx2.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Sounds/SFX/sfx4.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Sounds/SFX/sfx_crash.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Sounds/SFX/sfx3.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Assets/Sounds/SFX/sfx1.ogg" type="AudioStream" id=6]
 
 [node name="SoundSystem" type="Spatial"]
@@ -21,7 +21,7 @@ volume_db = -14.857
 autoplay = true
 
 [node name="ASPPickupPurpleSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = -33.072
 
 [node name="ASPPickupGreenSFX" type="AudioStreamPlayer" parent="."]
@@ -29,6 +29,5 @@ stream = ExtResource( 6 )
 volume_db = -33.072
 
 [node name="ASPDamagedSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-volume_db = -28.84
-pitch_scale = 2.79
+stream = ExtResource( 4 )
+volume_db = -10.487

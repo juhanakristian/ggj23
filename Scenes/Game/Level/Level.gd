@@ -27,8 +27,8 @@ func _on_player_damaged(obj_ref):
 	if health <= 0:
 		# player._on_game_over()
 		#haiku._randomize_haiku()
-		retry_ui.show()
 		KantoEventBus.emit_player_death()
+		retry_ui.show()
 
 		# KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/EnvTestLevel.tscn")
 	

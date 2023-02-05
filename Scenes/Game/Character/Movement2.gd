@@ -22,8 +22,6 @@ func _move_to_lane(lane):
 		move = $Lane1.translation.x
 	elif lane == 2:
 		move = $Lane2.translation.x
-	elif lane == 3:
-		move = $Lane3.translation.x
 	var tween = get_tree().create_tween()
 	tween.tween_property(player, "translation:x", move, 0.5)
 
@@ -68,5 +66,8 @@ func _on_reset_game():
 	speed = 30
 	dead = false
 	rotation_degrees.x = 0
+	player.translation.x = $Lane1.translation.x
+	player.translation.y = original_y
+	lane = 1
 	animation.play()
 
