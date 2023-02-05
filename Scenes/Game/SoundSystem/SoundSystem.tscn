@@ -12,13 +12,12 @@ script = ExtResource( 2 )
 
 [node name="ASPMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -38.455
+volume_db = -20.976
 autoplay = true
 
 [node name="ASPWalkSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -14.857
-autoplay = true
 
 [node name="ASPPickupPurpleSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

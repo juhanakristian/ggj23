@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Models/Master texture.material" type="Material" id=1]
 [ext_resource path="res://Assets/Textures/Barrel1_basecolor.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Game/Obstacles/Obstacle.gd" type="Script" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Barrels_Cylinder008"
@@ -21,9 +22,20 @@ surfaces/0 = {
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
 
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.345439, 0.466645, 0.434036 )
+
 [node name="BarrelClosed" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="Prop_Barrel1" type="MeshInstance" parent="."]
 transform = Transform( -0.224257, -0.809511, 0.000862595, -0.00472401, 0.000413561, -0.839987, 0.809498, -0.224259, -0.00466302, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.2842, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645665, 0.0454483, 0.490344 )
+shape = SubResource( 3 )
