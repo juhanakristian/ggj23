@@ -11,6 +11,7 @@ export var invincible = false
 
 onready var player = $Character2;
 onready var retry_ui = $RetryUI;
+onready var haiku = $RetryUI/Control;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,6 +24,7 @@ func _on_player_damaged(obj_ref):
 
 	if health <= 0:
 		player._on_game_over()
+		haiku._randomize_haiku()
 		retry_ui.show()
 
 		# KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/EnvTestLevel.tscn")
