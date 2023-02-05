@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/heavy_step2.ogg-5e03ff3db49d690a65fcb30719806e7f.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/SFX/heavy_step2.ogg"
+dest_files=[ "res://.import/heavy_step2.ogg-5e03ff3db49d690a65fcb30719806e7f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
