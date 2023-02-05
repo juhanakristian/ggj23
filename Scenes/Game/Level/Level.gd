@@ -50,6 +50,8 @@ func _on_reset_game():
 
 func _process(_delta):
 	handle_debug_commands()
+	if Input.is_action_just_pressed("quit_game"):
+		get_tree().quit()
 
 # Cheats and debugs
 func handle_debug_commands():
@@ -61,3 +63,4 @@ func handle_debug_commands():
 		
 	if Input.is_action_just_pressed("ui_home"):
 		invincible = !invincible
+	
