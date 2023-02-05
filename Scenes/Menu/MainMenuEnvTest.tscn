@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Menu/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/UI/main_font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Scenes/Menu/button_style.tres" type="StyleBox" id=3]
-[ext_resource path="res://Scenes/Game/Obstacles/Tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Game/Collectibles/CrystalPurpleEmission.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Game/Collectibles/CrystalGreenEmission.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Game/Character/Kanto_Character.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Menu/MainMenu_WorldEnv.tres" type="Environment" id=8]
-[ext_resource path="res://Assets/Materials/grass_material.tres" type="Material" id=9]
+[ext_resource path="res://Scenes/Game/Character/Kanto_Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Materials/grass_material.tres" type="Material" id=3]
+[ext_resource path="res://Scenes/Menu/MainMenu_WorldEnv.tres" type="Environment" id=4]
+[ext_resource path="res://Scenes/Game/Collectibles/CrystalGreenEmission.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Game/Collectibles/CrystalPurpleEmission.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Game/Obstacles/Tree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/UI/main_font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Scenes/Menu/button_style.tres" type="StyleBox" id=9]
 [ext_resource path="res://Assets/Fonts/zaychik/Zaychik-Regular.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="DynamicFont" id=3]
@@ -43,12 +43,12 @@ margin_bottom = 102.0
 margin_right = 200.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 200, 100 )
-custom_fonts/font = ExtResource( 2 )
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/focus = ExtResource( 3 )
-custom_styles/disabled = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
 text = "Start Game"
 
 [node name="ExitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
@@ -58,12 +58,12 @@ margin_bottom = 204.0
 rect_min_size = Vector2( 200, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/focus = ExtResource( 3 )
-custom_styles/disabled = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
 text = "Exit"
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
@@ -76,20 +76,20 @@ custom_fonts/font = SubResource( 3 )
 text = "KANTO"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 8 )
+environment = ExtResource( 4 )
 
 [node name="Scene" type="Spatial" parent="."]
 
-[node name="CrystalPurple" parent="Scene" instance=ExtResource( 5 )]
+[node name="CrystalPurple" parent="Scene" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0627, 0, 30.4166 )
 
-[node name="Tree" parent="Scene" instance=ExtResource( 4 )]
+[node name="Tree" parent="Scene" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22041, -24.4918, 2.8011 )
 
-[node name="CrystalGreen" parent="Scene" instance=ExtResource( 6 )]
+[node name="CrystalGreen" parent="Scene" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5901, 0.700683, 13.6477 )
 
-[node name="Player" parent="Scene" instance=ExtResource( 7 )]
+[node name="Player" parent="Scene" instance=ExtResource( 2 )]
 
 [node name="KinematicBody" type="KinematicBody" parent="Scene/Player"]
 
@@ -103,7 +103,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.644833, 2.24892, -1.09398 )
 [node name="MeshInstance" type="MeshInstance" parent="Scene"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.381489, 0 )
 mesh = SubResource( 2 )
-material/0 = ExtResource( 9 )
+material/0 = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.992934, 0, 0.118664, 0, 1, 0, -0.118664, 0, -0.992934, -1.82392, 2.03066, -8.8026 )
