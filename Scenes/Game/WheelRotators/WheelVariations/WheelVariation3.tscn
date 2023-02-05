@@ -53,49 +53,63 @@ transform = Transform( 1, 0, 0, 0, 0.677736, 0.735305, 0, -0.735305, 0.677736, 0
 transform = Transform( 1, 0, 0, 0, -0.6901, -0.723714, 0, 0.723714, -0.6901, 0, 0, 0 )
 
 [node name="Collectibles" type="Spatial" parent="Wheel"]
-visible = false
 
 [node name="Coin" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.998171, 0.0604562, 0, -0.0604562, 0.998171, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.871591, 0.490235, 0, -0.490235, -0.871591, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin1" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.989103, 0.147222, 0, -0.147222, 0.989103, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.911, 0.412405, 0, -0.412405, -0.911, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin2" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.972508, 0.232868, 0, -0.232868, 0.972508, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.943477, 0.331437, 0, -0.331437, -0.943477, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin3" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.948512, 0.316742, 0, -0.316742, 0.948512, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.968774, 0.247946, 0, -0.247946, -0.968774, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin4" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.917297, 0.398205, 0, -0.398205, 0.917297, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.986698, 0.162568, 0, -0.162568, -0.986698, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin5" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.834213, 0.551442, 0, -0.551442, 0.834213, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.997181, 0.0750309, 0, -0.0750309, -0.997181, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin6" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.782977, 0.62205, 0, -0.62205, 0.782977, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.999925, -0.0121647, 0, 0.0121647, -0.999925, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin7" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.725783, 0.687924, 0, -0.687924, 0.725783, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.995061, -0.0992675, 0, 0.0992675, -0.995061, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin8" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.663064, 0.748562, 0, -0.748562, 0.663064, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.982622, -0.185615, 0, 0.185615, -0.982622, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin9" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.5953, 0.803504, 0, -0.803504, 0.5953, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.962706, -0.27055, 0, 0.27055, -0.962706, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin10" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.517086, 0.855933, 0, -0.855933, 0.517086, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.932991, -0.359899, 0, 0.359899, -0.932991, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin11" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.440519, 0.897743, 0, -0.897743, 0.440519, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.898073, -0.439845, 0, 0.439845, -0.898073, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin12" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.360599, 0.932721, 0, -0.932721, 0.360599, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.856321, -0.516444, 0, 0.516444, -0.856321, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin13" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.277935, 0.9606, 0, -0.9606, 0.277935, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.808052, -0.589112, 0, 0.589112, -0.808052, 0, 0, 0 )
+delay = 10.0
 
 [node name="Coin14" parent="Wheel/Collectibles" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.193156, 0.981168, 0, -0.981168, 0.193156, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.753632, -0.657296, 0, 0.657296, -0.753632, 0, 0, 0 )
+delay = 10.0
