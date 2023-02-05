@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Game/Level/Retry.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Game/WheelRotators/WheelVariations/WheelVariation3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Game/Level/Level.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Game/WheelRotators/WheelVariations/WheelVariation1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Game/WheelRotators/WheelVariations/WheelVariation2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Game/Character/Character2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI/DebugUI.tscn" type="PackedScene" id=9]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0.368627, 0.427451, 0.466667, 1 )
+sky_horizon_color = Color( 0.368627, 0.427451, 0.466667, 1 )
+ground_bottom_color = Color( 0.368627, 0.427451, 0.466667, 1 )
+ground_horizon_color = Color( 0.368627, 0.427451, 0.466667, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+fog_enabled = true
+fog_depth_begin = 2.3
+fog_depth_end = 61.9
+tonemap_mode = 2
+tonemap_exposure = 0.39
+tonemap_white = 4.05
+
+[node name="Level" type="Spatial"]
+transform = Transform( 1, -0.000311509, -0.000957868, 0.000309593, 0.999998, -0.00199421, 0.000958489, 0.00199392, 0.999998, 0, 0, 0 )
+script = ExtResource( 4 )
+
+[node name="WheelRotatorV1" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.999998, 0.00135282, -0.00124779, -0.00135238, 0.999999, 0.000360653, 0.00124826, -0.000358958, 0.999999, -0.35683, 0.000111155, 0.000341797 )
+spin_speed = 0.0
+
+[node name="WheelRotatorV2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, -0.000527473, 2.59555e-05, 0.00044184, 0.862549, 0.505973, -0.000289273, -0.505973, 0.862549, 3.72826, -0.00118214, -0.0154272 )
+spin_speed = 0.0
+
+[node name="WheelRotatorV3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 3.88718e-06, -0.000309324, -3.72236e-06, 1, 0.000465009, 0.000309326, -0.000465007, 1, 7.2896, -0.00227073, -0.00698248 )
+spin_speed = 0.0
+
+[node name="Character2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, -1.03455e-10, 0, 1.02318e-11, 1, 9.31323e-10, 0, 0, 1, 3.442, -0.00107219, -0.00329698 )
+speed = 30
+
+[node name="Camera" type="Camera" parent="Character2"]
+transform = Transform( 1, 5.76256e-09, 0, 8.86757e-12, 0.953916, 0.300073, 0, -0.300073, 0.953916, -0.161829, 31.499, 8.1007 )
+current = true
+
+[node name="DebugUI" parent="." instance=ExtResource( 9 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="RetryUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" parent="RetryUI" instance=ExtResource( 2 )]
