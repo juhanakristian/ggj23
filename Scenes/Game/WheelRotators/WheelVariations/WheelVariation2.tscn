@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Game/WheelRotators/WheelRotator.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Game/Obstacles/Fence.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Game/Collectibles/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Game/Obstacles/Tree.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Game/Obstacles/Barrel.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "rootrunner_separate_Cylinder"
@@ -41,9 +40,6 @@ transform = Transform( 1, 0, 0, 0, 0.9146, 0.40436, 0, -0.40436, 0.9146, 0, 0, 0
 
 [node name="Tree2" parent="Wheel/Obstacles" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, -0.856123, -0.516772, 0, 0.516772, -0.856123, -0.138923, 0, 0 )
-
-[node name="BarrelClosed" parent="Wheel/Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 0.0275727, -0.99962, 0, 0.99962, 0.0275727, 0, 0, 0 )
 
 [node name="Collectibles" type="Spatial" parent="Wheel"]
 transform = Transform( 1, 0, 0, 0, -0.552664, -0.833404, 0, 0.833404, -0.552664, 0, 0, 0 )
