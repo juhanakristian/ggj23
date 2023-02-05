@@ -35,7 +35,7 @@ func emit_player_collected_item(obj_ref, item_type):
 const SIGNAL_PLAYER_EXIT_GAME = "player_exit_game"
 signal player_exit_game()
 
-func connect_player_exit_game(obj, method="player_exit_game"):
+func connect_player_exit_game(obj, method="_on_player_exit_game"):
 	var err = connect(SIGNAL_PLAYER_EXIT_GAME, obj, method)
 	handle_connect_result(err, SIGNAL_PLAYER_EXIT_GAME, obj, method)
 
@@ -47,10 +47,11 @@ func emit_player_exit_game():
 const SIGNAL_PLAYER_PAUSE_GAME = "player_pause_game"
 signal player_pause_game()
 
-func connect_player_pause_game(obj, method="player_pause_game"):
+func connect_player_pause_game(obj, method="_on_player_pause_game"):
 	var err = connect(SIGNAL_PLAYER_PAUSE_GAME, obj, method)
 	handle_connect_result(err, SIGNAL_PLAYER_PAUSE_GAME, obj, method)
 
 func emit_player_pause_game():
+	print("Emitting signal pause game")
 	emit_signal(SIGNAL_PLAYER_PAUSE_GAME)
 
