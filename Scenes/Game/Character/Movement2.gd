@@ -8,8 +8,8 @@ extends Spatial
 export var lane = 1;
 export var jump_height = 3;
 export var jump_duration = 0.5;
-export var speed = 20;
-var paused = false;
+export var speed = 30;
+var dead = false;
 onready var player = $Player
 onready var animation = $Player/AnimationPlayer
 onready var original_y = $Player.translation.y
@@ -33,9 +33,15 @@ func _jump():
 	tween.tween_property(player, "translation:y", translation.y + jump_height, jump_duration / 2).set_trans(Tween.TRANS_EXPO)
 	tween.tween_property(player, "translation:y", original_y, jump_duration / 2).set_trans(Tween.TRANS_QUART)
 
+func _ready():
+	KantoEventBus.connect_player_death(self, "_on_game_over")
+	KantoEventBus.connect_reset_game(self)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if dead:
+		return
+
 	var is_moving = player.translation.x != $Lane1.translation.x && player.translation.x != $Lane2.translation.x && player.translation.x != $Lane0.translation.x
 	var is_jumping = player.translation.y != original_y
 
@@ -55,6 +61,12 @@ func _process(delta):
 	
 
 func _on_game_over():
-	set_process(false)
+	dead = true
 	animation.stop()
+
+func reset_game():
+	speed = 30
+	dead = false
+	rotation_degrees.x = 0
+	animation.play()
 

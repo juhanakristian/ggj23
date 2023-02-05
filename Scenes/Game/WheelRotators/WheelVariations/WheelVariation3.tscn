@@ -33,7 +33,7 @@ material/0 = SubResource( 2 )
 [node name="Obstacles" type="Spatial" parent="Wheel"]
 
 [node name="Tree" parent="Wheel/Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 0.798961, -0.601383, 0, 0.601383, 0.798961, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.798961, -0.601383, 0, 0.601383, 0.798961, -22.8962, 0, 0 )
 
 [node name="BarrelClosed2" parent="Wheel/Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 0.315782, -0.948832, 0, 0.948832, 0.315782, 0, 0, 0 )
@@ -47,10 +47,10 @@ transform = Transform( 1, 0, 0, 0, -0.514933, 0.85723, 0, -0.85723, -0.514933, 0
 transform = Transform( 1, 0, 0, 0, 0.00795862, 0.999968, 0, -0.999968, 0.00795862, 0, 0, 0 )
 
 [node name="Tree2" parent="Wheel/Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 0.677736, 0.735305, 0, -0.735305, 0.677736, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.677736, 0.735305, 0, -0.735305, 0.677736, -22.8962, 0, 0 )
 
 [node name="Tree3" parent="Wheel/Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, -0.6901, -0.723714, 0, 0.723714, -0.6901, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.6901, -0.723714, 0, 0.723714, -0.6901, -22.8962, 0, 0 )
 
 [node name="Collectibles" type="Spatial" parent="Wheel"]
 

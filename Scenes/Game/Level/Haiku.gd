@@ -17,6 +17,7 @@ var haikus = [
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_randomize_haiku()
+	KantoEventBus.connect_player_death(self, "_randomize_haiku")
 
 
 func _randomize_haiku():
@@ -25,3 +26,8 @@ func _randomize_haiku():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	KantoEventBus.emit_reset_game()
+	#KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/EnvTestLevel.tscn")

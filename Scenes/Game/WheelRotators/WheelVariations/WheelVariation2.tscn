@@ -34,13 +34,13 @@ material/0 = SubResource( 2 )
 [node name="Obstacles" type="Spatial" parent="Wheel"]
 
 [node name="Tree" parent="Wheel/Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 0.798961, -0.601383, 0, 0.601383, 0.798961, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.798961, -0.601383, 0, 0.601383, 0.798961, -0.138923, 0, 0 )
 
 [node name="Fence" parent="Wheel/Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 0.9146, 0.40436, 0, -0.40436, 0.9146, 0, 0, 0 )
 
 [node name="Tree2" parent="Wheel/Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, -0.856123, -0.516772, 0, 0.516772, -0.856123, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -0.856123, -0.516772, 0, 0.516772, -0.856123, -0.138923, 0, 0 )
 
 [node name="BarrelClosed" parent="Wheel/Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 0.0275727, -0.99962, 0, 0.99962, 0.0275727, 0, 0, 0 )

@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Game/Character/Movement2.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.287147, 0.803936, 0.338472 )
+extents = Vector3( 0.287147, 0.996149, 0.338472 )
 
 [node name="Character" type="Spatial"]
 script = ExtResource( 2 )
@@ -15,7 +15,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 [node name="KinematicBody" type="KinematicBody" parent="Player"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Player/KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 1.5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 1.59657, 0 )
 shape = SubResource( 1 )
 
 [node name="Lane0" type="Spatial" parent="."]

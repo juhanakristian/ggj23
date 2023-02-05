@@ -17,15 +17,17 @@ onready var haiku = $RetryUI/Control;
 func _ready():
 	KantoEventBus.connect_player_damaged(self)
 	KantoEventBus.connect_player_collected_item(self)
+	KantoEventBus.connect_reset_game(self)
 
 func _on_player_damaged(obj_ref):
 	if not invincible:
 		health -= 1;
 
 	if health <= 0:
-		player._on_game_over()
-		haiku._randomize_haiku()
+		# player._on_game_over()
+		#haiku._randomize_haiku()
 		retry_ui.show()
+		KantoEventBus.emit_player_death()
 
 		# KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/EnvTestLevel.tscn")
 	
@@ -36,13 +38,7 @@ func _on_player_collected_item(obj_ref, item_type):
 		score += 10
 		# KantoEventBus.emit_player_scored(self, score)
 
-func _input(event):
-	if health > 0:
-		return
 
-	if event is InputEventKey:
-		if event.pressed:
-			KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/EnvTestLevel.tscn")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func reset_game():
+	retry_ui.hide()

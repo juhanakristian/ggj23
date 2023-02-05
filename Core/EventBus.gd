@@ -54,3 +54,33 @@ func connect_player_pause_game(obj, method="player_pause_game"):
 func emit_player_pause_game():
 	emit_signal(SIGNAL_PLAYER_PAUSE_GAME)
 
+
+const SIGNAL_PLAYER_DEATH = "player_death"
+signal player_death()
+
+func connect_player_death(obj, method="player_death"):
+	var err = connect(SIGNAL_PLAYER_DEATH, obj, method)
+	handle_connect_result(err, SIGNAL_PLAYER_DEATH, obj, method)
+
+func emit_player_death():
+	emit_signal(SIGNAL_PLAYER_DEATH)
+
+const SIGNAL_RESET_GAME = "reset_game"
+signal reset_game()
+
+func connect_reset_game(obj, method="reset_game"):
+	var err = connect(SIGNAL_RESET_GAME, obj, method)
+	handle_connect_result(err, SIGNAL_RESET_GAME, obj, method)
+
+func emit_reset_game():
+	emit_signal(SIGNAL_RESET_GAME)
+
+const SIGNAL_PLAYER_JUMP = "player_jump"
+signal player_jump()
+
+func connect_player_jump(obj, method="player_jump"):
+	var err = connect(SIGNAL_PLAYER_JUMP, obj, method)
+	handle_connect_result(err, SIGNAL_PLAYER_JUMP, obj, method)
+
+func emit_player_jump():
+	emit_signal(SIGNAL_PLAYER_JUMP)
