@@ -52,7 +52,6 @@ func _process(delta):
 	
 	rotation_degrees.x = rotation_degrees.x - delta * speed
 	speed += 0.2 * delta
-	print(speed)
 	
 
 func _on_game_over():
