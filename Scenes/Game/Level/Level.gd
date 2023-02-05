@@ -28,8 +28,10 @@ func _on_player_damaged(obj_ref):
 		# KantoSceneLoader.load_scene(self, "res://Scenes/Game/Level/EnvTestLevel.tscn")
 	
 func _on_player_collected_item(obj_ref, item_type):
-	if item_type == "coin":
+	if item_type == "green_crystal":
 		score += 1
+	if item_type == "purple_crystal":
+		score += 10
 		# KantoEventBus.emit_player_scored(self, score)
 
 func _input(event):
