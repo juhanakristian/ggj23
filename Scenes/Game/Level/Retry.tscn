@@ -1,16 +1,40 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/UI/main_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Game/Level/Haiku.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 2.0
-margin_bottom = 2.0
+script = ExtResource( 2 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 428.0
-margin_top = 248.0
-margin_right = 666.0
-margin_bottom = 311.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.643137 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -131.5
+margin_top = -18.0
+margin_right = 131.5
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 1 )
 text = "Press any key to retry"
+
+[node name="Haiku" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -215.0
+margin_top = 47.0
+margin_right = 215.0
+margin_bottom = 161.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Axe cleaves the trunk's heart
+Lifeblood spills out on the ground
+Silent death echoes."
+align = 1
