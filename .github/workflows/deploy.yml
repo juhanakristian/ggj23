@@ -32,7 +32,7 @@ jobs:
         with:
           name: "index.html"
           preset: HTML5
-          debugMode: "true"
+          debugMode: "false"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
