@@ -85,3 +85,27 @@ func connect_player_jump(obj, method="_on_player_jump"):
 
 func emit_player_jump():
 	emit_signal(SIGNAL_PLAYER_JUMP)
+
+
+const SIGNAL_PLAYER_SCORE_UPDATED = "player_score_updated"
+signal player_score_updated(score)
+
+func connect_player_score_updated(obj, method="_on_player_score_updated"):
+	var err = connect(SIGNAL_PLAYER_SCORE_UPDATED, obj, method)
+	handle_connect_result(err, SIGNAL_PLAYER_SCORE_UPDATED, obj, method)
+
+func emit_player_score_updated(score):
+	emit_signal(SIGNAL_PLAYER_SCORE_UPDATED, score)
+
+
+const SIGNAL_PLAYER_HEALTH_UPDATED = "player_health_updated"
+signal player_health_updated(health)
+
+
+func connect_player_health_updated(obj, method="_on_player_health_updated"):
+	var err = connect(SIGNAL_PLAYER_HEALTH_UPDATED, obj, method)
+	handle_connect_result(err, SIGNAL_PLAYER_HEALTH_UPDATED, obj, method)
+	
+	
+func emit_player_health_updated(health):
+	emit_signal(SIGNAL_PLAYER_HEALTH_UPDATED, health)

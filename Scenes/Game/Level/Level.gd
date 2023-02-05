@@ -37,7 +37,8 @@ func _on_player_collected_item(obj_ref, item_type):
 		score += 1
 	if item_type == "purple_crystal":
 		score += 10
-		# KantoEventBus.emit_player_scored(self, score)
+	
+	KantoEventBus.emit_player_score_updated(score)
 
 func _on_reset_game():
 	retry_ui.hide()
