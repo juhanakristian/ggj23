@@ -64,7 +64,7 @@ func _on_game_over():
 	dead = true
 	animation.stop()
 
-func reset_game():
+func _on_reset_game():
 	speed = 30
 	dead = false
 	rotation_degrees.x = 0

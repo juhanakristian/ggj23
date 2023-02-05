@@ -1,13 +1,14 @@
 extends Spatial
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+# Game related definitions
 var score = 0;
 var health = 3;
 
+# Debug related
 export var invincible = false
+onready var debug_ui = $DebugUI
+
+
 
 onready var player = $Character2;
 onready var retry_ui = $RetryUI;
@@ -38,7 +39,22 @@ func _on_player_collected_item(obj_ref, item_type):
 		score += 10
 		# KantoEventBus.emit_player_scored(self, score)
 
-
-
-func reset_game():
+func _on_reset_game():
 	retry_ui.hide()
+	# Resets the score and health
+	score = 0;
+	health = 3;
+
+func _process(_delta):
+	handle_debug_commands()
+
+# Cheats and debugs
+func handle_debug_commands():
+	if Input.is_action_just_pressed("ui_page_up"):
+		debug_ui.visible = true;
+	
+	if Input.is_action_just_pressed("ui_page_down"):
+		debug_ui.visible = false;
+		
+	if Input.is_action_just_pressed("ui_home"):
+		invincible = !invincible

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Sounds/Music/kazoo_apocalypse.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scenes/Game/SoundSystem/SoundSystem.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Sounds/SFX/heavy_step2.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sounds/SFX/heavy_step1.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sounds/SFX/sfx2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Sounds/SFX/sfx4.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Assets/Sounds/SFX/sfx1.ogg" type="AudioStream" id=6]
@@ -17,8 +17,8 @@ autoplay = true
 
 [node name="ASPWalkSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -28.84
-pitch_scale = 2.79
+volume_db = -14.857
+autoplay = true
 
 [node name="ASPPickupPurpleSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

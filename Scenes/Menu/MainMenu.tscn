@@ -1,13 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/main_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/Menu/button_style.tres" type="StyleBox" id=3]
 [ext_resource path="res://Scenes/Game/Obstacles/Tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Game/Collectibles/CrystalPurpleEmission.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Game/Collectibles/CrystalGreenEmission.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Game/Character/Kanto_Character.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Menu/MainMenu_WorldEnv.tres" type="Environment" id=8]
+[ext_resource path="res://Scenes/Game/Level/foggy_world_env.tres" type="Environment" id=8]
 [ext_resource path="res://Assets/Materials/grass_material.tres" type="Material" id=9]
 [ext_resource path="res://Assets/Fonts/zaychik/Zaychik-Regular.ttf" type="DynamicFontData" id=10]
 
@@ -18,8 +16,8 @@ font_data = ExtResource( 10 )
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.287147, 1, 0.593006 )
 
-[sub_resource type="CubeMesh" id=2]
-size = Vector3( 100, 1, 100 )
+[sub_resource type="CylinderMesh" id=4]
+top_radius = 10.0
 
 [node name="MainMenu" type="Spatial"]
 script = ExtResource( 1 )
@@ -80,16 +78,12 @@ environment = ExtResource( 8 )
 
 [node name="Scene" type="Spatial" parent="."]
 
-[node name="CrystalPurple" parent="Scene" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0627, 0, 30.4166 )
-
 [node name="Tree" parent="Scene" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22041, -24.4918, 2.8011 )
-
-[node name="CrystalGreen" parent="Scene" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5901, 0.700683, 13.6477 )
+visible = false
 
 [node name="Player" parent="Scene" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59242, 0 )
 
 [node name="KinematicBody" type="KinematicBody" parent="Scene/Player"]
 
@@ -100,10 +94,10 @@ shape = SubResource( 1 )
 [node name="OmniLight" type="OmniLight" parent="Scene/Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.644833, 2.24892, -1.09398 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Scene"]
+[node name="Floor" type="MeshInstance" parent="Scene"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.381489, 0 )
-mesh = SubResource( 2 )
+mesh = SubResource( 4 )
 material/0 = ExtResource( 9 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.992934, 0, 0.118664, 0, 1, 0, -0.118664, 0, -0.992934, -1.82392, 2.03066, -8.8026 )
+transform = Transform( -0.999911, 0, 0.0133166, 0, 1, 0, -0.0133166, 0, -0.999911, -1.40378, 2.03066, -7.31111 )
