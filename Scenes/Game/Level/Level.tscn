@@ -46,6 +46,7 @@ transform = Transform( 1, 5.76256e-09, 0, 8.86757e-12, 0.953916, 0.300073, 0, -0
 current = true
 
 [node name="DebugUI" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 10 )

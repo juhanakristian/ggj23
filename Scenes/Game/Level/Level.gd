@@ -24,6 +24,8 @@ func _on_player_damaged(obj_ref):
 	if not invincible:
 		health -= 1;
 
+	KantoEventBus.emit_player_health_updated(health)
+
 	if health <= 0:
 		# player._on_game_over()
 		#haiku._randomize_haiku()
