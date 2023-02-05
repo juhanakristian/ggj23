@@ -12,10 +12,13 @@ func _ready():
 	KantoEventBus.connect_player_exit_game(self)
 	
 	KantoEventBus.connect_player_jump(self)
+	KantoEventBus.connect_reset_game(self)
 	
 func _on_player_pause_game():
 	log_event("Pause game requested..")
 	
+func _on_reset_game():
+	log_event("Game resetted")
 	
 func _on_player_jump():
 	log_event("Player jumped")
