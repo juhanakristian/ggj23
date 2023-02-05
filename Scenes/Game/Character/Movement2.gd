@@ -40,7 +40,7 @@ func _process(delta):
 	var is_jumping = player.translation.y != original_y
 
 	if Input.is_action_just_pressed("move_right"):
-		lane = min(lane+1,3)
+		lane = min(lane+1,2)
 		_move_to_lane(lane)
 	if Input.is_action_just_pressed("move_left"):
 		lane = max(lane-1,0)
